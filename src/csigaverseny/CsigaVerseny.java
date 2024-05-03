@@ -15,12 +15,14 @@ public class CsigaVerseny {
     static Scanner scan = new Scanner(System.in);
     static IGame nGame = new Game();
     
+    
     public static void main(String[] args) throws InterruptedException
-    {
+    {       
         WriteOut();
         System.out.println("\nMelyik csigára szeretne fogadni?");
         System.out.println("Csiga száma: ");
         int index = scan.nextInt();
+        nGame.Bet(nGame.getSnails()[index-1]);
         
         for(int i=0; i<ROUNDS; i++)
         {
